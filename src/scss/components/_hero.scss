@@ -29,10 +29,11 @@
 
     @include small-tablet {
       padding-bottom: 0;
+      background-position: right;
     }
 
     @include mobile {
-      background-size: 100% 100%;
+      // background-size: 100% 100%;
       min-height: 414px;
     }
   }
@@ -91,7 +92,7 @@
       }
 
       @include mobile {
-        height: 100px;
+        height: 120px;
       }
     }
 
@@ -117,6 +118,7 @@
 
     @include mobile {
       font-size: 24px;
+      max-width: 80%;
     }
   }
 
@@ -165,6 +167,7 @@
     @include small-tablet {
       max-width: 90%;
       padding-bottom: 0;
+      padding-top: 16px;
     }
   }
 

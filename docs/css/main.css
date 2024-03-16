@@ -627,11 +627,11 @@ h4 {
 @media (max-width: 768px) {
   .hero__container {
     padding-bottom: 0;
+    background-position: right;
   }
 }
 @media (max-width: 576px) {
   .hero__container {
-    background-size: 100% 100%;
     min-height: 414px;
   }
 }
@@ -691,7 +691,7 @@ h4 {
 }
 @media (max-width: 576px) {
   .hero__title::after {
-    height: 100px;
+    height: 120px;
   }
 }
 @media (max-width: 1440px) {
@@ -720,6 +720,7 @@ h4 {
 @media (max-width: 576px) {
   .hero__title {
     font-size: 24px;
+    max-width: 80%;
   }
 }
 .hero__info {
@@ -772,6 +773,7 @@ h4 {
   .hero__info {
     max-width: 90%;
     padding-bottom: 0;
+    padding-top: 16px;
   }
 }
 .hero__btn--mobile {
