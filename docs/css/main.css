@@ -2011,7 +2011,7 @@ h4 {
   -ms-flex-pack: end;
   justify-content: flex-end;
 }
-.lk-card__link button {
+.lk-card__link .extra {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
