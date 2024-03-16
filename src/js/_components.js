@@ -1,6 +1,7 @@
 import './components/sliders'
 import './components/select'
 import './components/account'
+import './components/corrects'
 import './components/progress'
 import './components/sites-tabs'
 import './components/login'

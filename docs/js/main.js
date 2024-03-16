@@ -14,14 +14,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_select__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_select__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_account__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/account */ "./src/js/components/account.js");
 /* harmony import */ var _components_account__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_account__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _components_progress__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/progress */ "./src/js/components/progress.js");
-/* harmony import */ var _components_progress__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_progress__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _components_sites_tabs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/sites-tabs */ "./src/js/components/sites-tabs.js");
-/* harmony import */ var _components_sites_tabs__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_sites_tabs__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _components_login__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/login */ "./src/js/components/login.js");
-/* harmony import */ var _components_login__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_components_login__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _components_modal_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/modal-service */ "./src/js/components/modal-service.js");
-/* harmony import */ var _components_modal_service__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_components_modal_service__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _components_corrects__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/corrects */ "./src/js/components/corrects.js");
+/* harmony import */ var _components_corrects__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_corrects__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _components_progress__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/progress */ "./src/js/components/progress.js");
+/* harmony import */ var _components_progress__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_progress__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _components_sites_tabs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/sites-tabs */ "./src/js/components/sites-tabs.js");
+/* harmony import */ var _components_sites_tabs__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_components_sites_tabs__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _components_login__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/login */ "./src/js/components/login.js");
+/* harmony import */ var _components_login__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_components_login__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _components_modal_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/modal-service */ "./src/js/components/modal-service.js");
+/* harmony import */ var _components_modal_service__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_components_modal_service__WEBPACK_IMPORTED_MODULE_7__);
+
 
 
 
@@ -181,6 +184,31 @@ if (accountModal) {
     accountModal.classList.remove('active');
   });
   accountModalBody.addEventListener('click', e => {
+    e.stopPropagation();
+  });
+}
+
+/***/ }),
+
+/***/ "./src/js/components/corrects.js":
+/*!***************************************!*\
+  !*** ./src/js/components/corrects.js ***!
+  \***************************************/
+/***/ (() => {
+
+const correctsModal = document.querySelector('.correct');
+if (correctsModal) {
+  const correctsBtn = document.querySelectorAll('[data-correct-btn]');
+  const correctsModalBody = correctsModal.querySelector('.modal__body');
+  correctsBtn.forEach(btn => {
+    btn.addEventListener('click', e => {
+      correctsModal.classList.add('active');
+    });
+  });
+  correctsModal.addEventListener('click', e => {
+    correctsModal.classList.remove('active');
+  });
+  correctsModalBody.addEventListener('click', e => {
     e.stopPropagation();
   });
 }

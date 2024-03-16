@@ -23,7 +23,7 @@
     justify-content: flex-end;
 
 
-    a {
+    button {
       display: flex;
       align-items: center;
       gap: 8px;
@@ -103,7 +103,7 @@
     }
 
     &__link {
-      a {
+      button {
         color: #c7c7c7;
       }
 

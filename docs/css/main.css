@@ -2011,7 +2011,7 @@ h4 {
   -ms-flex-pack: end;
   justify-content: flex-end;
 }
-.lk-card__link a {
+.lk-card__link button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2083,7 +2083,7 @@ h4 {
 .lk-card.disabled .lk-card__title {
   color: #c7c7c7;
 }
-.lk-card.disabled .lk-card__link a {
+.lk-card.disabled .lk-card__link button {
   color: #c7c7c7;
 }
 .lk-card.disabled .lk-card__link svg {
@@ -2190,5 +2190,57 @@ h4 {
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
   align-self: center;
+}
+
+.correct__title {
+  margin-bottom: 24px;
+}
+.correct .modal__body {
+  max-width: 878px;
+}
+.correct__textarea {
+  height: 190px;
+  width: 100%;
+  resize: none;
+  margin-bottom: 32px;
+}
+.correct__item:not(:last-child) {
+  margin-bottom: 16px;
+}
+.correct__tasks {
+  margin-bottom: 40px;
+  padding-bottom: 24px;
+}
+.correct__tasks:not(:last-of-type) {
+  border-bottom: 1px solid #e5e5e5;
+}
+.correct__status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+.correct__status .status {
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  font-weight: 500;
+}
+.correct__status .status--pending {
+  background-color: #ffc329;
+}
+.correct__status .status--notready {
+  background-color: #ce2028;
+}
+.correct__status .status--ready {
+  background-color: #23cc20;
+}
+.correct__task {
+  font-weight: 600;
 }
 /*# sourceMappingURL=main.css.map */
