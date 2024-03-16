@@ -1,0 +1,109 @@
+.cta {
+  padding: 65px 0 70px;
+  margin-bottom: 168px;
+  background-color: #fcfbff;
+  position: relative;
+  z-index: 1;
+
+  &__bg {
+    background-color: #fcfbff;
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./../img/cta-bg-2x.png');
+    background-position: right top;
+    background-size: auto calc(100% - 70px);
+    background-repeat: no-repeat;
+
+    @include big-desktop {
+      opacity: 0.8;
+    }
+
+    @include tablet {
+      position: relative;
+      height: 414px;
+      background-size: cover;
+      opacity: 1;
+      background-image: url('./../img/cta-bg-mob.png');
+    }
+
+    @include small-tablet {
+      transform: rotateY(180deg);
+    }
+  }
+
+  @include big-desktop {
+    margin-bottom: 120px;
+    padding: 40px 0;
+  }
+
+  @include tablet {
+    padding-bottom: 0;
+  }
+
+  &__rectangles {
+    position: absolute;
+    right: -200px;
+    bottom: -100px;
+
+    @include big-desktop {}
+
+    @include tablet {
+      display: block;
+    }
+  }
+
+  &__rec {
+    width: 669px;
+    height: 209px;
+    border-radius: 20px;
+    background-color: #fff;
+
+    @include big-desktop {
+      width: 620px;
+    }
+
+    @include tablet {
+      width: 600px;
+      height: 160px;
+    }
+
+    &:nth-child(1) {
+      position: absolute;
+      bottom: 200px;
+      left: 200px;
+    }
+
+    &:nth-child(2) {
+      position: absolute;
+      bottom: 100px;
+      left: 150px;
+    }
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 40px;
+    max-width: 760px;
+    width: 100%;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+
+  &__textarea {
+    grid-column: 2 span;
+
+    height: 190px;
+
+    @include mobile {
+      grid-column: 1 span;
+    }
+  }
+}

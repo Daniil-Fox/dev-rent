@@ -1,0 +1,50 @@
+.lk-services {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+
+  &__slider {
+    min-width: 0;
+    max-width: 100%;
+
+    .swiper-slide {
+      max-width: 100%;
+      box-sizing: border-box;
+      height: auto !important;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__items {
+    align-items: stretch;
+  }
+}
+
+.lk-service {
+  padding: 32px 32px 48px;
+  padding-right: 74px;
+  background-color: #fff;
+  min-height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+
+
+  &__desc {
+    margin: 0;
+    margin-bottom: 24px;
+  }
+
+  &__btn {
+    margin-top: auto;
+  }
+}

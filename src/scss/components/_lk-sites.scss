@@ -1,0 +1,93 @@
+.lk-sites {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  display: none;
+
+  &.active {
+    display: block;
+  }
+
+  &__content {
+    display: none;
+    position: relative;
+    flex-grow: 1;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__notify {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    font-weight: 600;
+    font-size: 32px;
+    color: #b5b5b5;
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__control {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__navigate {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      fill: #2A42CD;
+    }
+
+    &.swiper-button-disabled {
+      cursor: default;
+
+      svg {
+        fill: #B0B0B0;
+      }
+    }
+
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px;
+  }
+
+  &__btn {
+    padding: 18.5px 32px;
+    border-radius: 20px;
+
+    font-weight: 400;
+    font-size: 16px;
+    color: #000;
+
+    &.active {
+      background-color: #dbe1ff;
+    }
+  }
+
+  &__items {
+    margin-bottom: 32px;
+
+    .swiper-slide {
+      width: auto;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.select {
+
+
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 30px 16px 16px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #23209f;
+    cursor: pointer;
+    border: 1px solid #3d55dd;
+    border-radius: 20px;
+    background-color: #fff;
+
+    .arr {
+      display: block;
+      width: 15px;
+      height: 15px;
+      border-right: 1px solid #393186;
+      border-bottom: 1px solid #393186;
+      transform: rotate(45deg);
+      transform-origin: center;
+
+      transition: transform .3s ease-out;
+    }
+  }
+
+  &.active {
+    .select__header {
+      .arr {
+        transform: rotate(225deg);
+      }
+    }
+  }
+}

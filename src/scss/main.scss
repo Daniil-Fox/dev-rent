@@ -1,0 +1,28 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// подключения компонентов страницы
+@import "./components/header";
+@import "./components/nav";
+@import "./components/hero";
+@import "./components/benefits";
+@import "./components/about-section";
+@import "./components/work";
+@import "./components/cta";
+@import "./components/dropdown";
+@import "./components/form";
+@import "./components/select";
+@import "./components/footer";
+@import "./components/modal";
+@import "./components/sidebar";
+@import "./components/lk-header";
+@import "./components/lk-body";
+@import "./components/lk-sites";
+@import "./components/lk-support";
+@import "./components/lk-services";
+@import "./components/lk-card";
+@import "./components/service-modal";
+@import "./components/account";

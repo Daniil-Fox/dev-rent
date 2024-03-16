@@ -1,0 +1,131 @@
+.lk-card {
+  padding: 40px 32px 24px;
+  background-color: #fff;
+
+  &__title {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__header {
+
+    margin-bottom: 32px;
+
+    &--inactive {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 700;
+      font-size: 16px;
+      color: #000;
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+      fill: #3D55DD;
+    }
+  }
+}
+
+.lk-info {
+  &__circle {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 24px;
+
+    .progress {
+      transform: rotate(180deg);
+      transform-origin: center;
+      stroke: #3D55DD;
+    }
+  }
+
+  &__name {
+
+    font-weight: 700;
+    font-size: 18px;
+    color: #000;
+  }
+
+  &__value {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 120%;
+    color: #000;
+  }
+
+  &__chars {
+    margin-bottom: 22px;
+  }
+
+  &__char {
+    &:not(:last-of-type) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__capture {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 120%;
+    color: #000;
+  }
+
+  &__info {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 16px;
+    color: #000;
+  }
+
+
+}
+
+.lk-card.disabled {
+  .lk-card {
+    &__title {
+      color: #c7c7c7;
+    }
+
+    &__link {
+      a {
+        color: #c7c7c7;
+      }
+
+      svg {
+        fill: #c7c7c7;
+      }
+    }
+  }
+
+  .lk-info {
+    &__circle {
+      .progress {
+        stroke: #c7c7c7;
+      }
+    }
+
+    &__name,
+    &__value,
+    &__capture,
+    &__info {
+      color: #c7c7c7;
+    }
+
+  }
+}

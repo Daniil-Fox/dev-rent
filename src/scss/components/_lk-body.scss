@@ -1,0 +1,23 @@
+.lk-body {
+  padding: 32px 40px;
+  background-color: #fdfdfd;
+  height: 100%;
+
+
+  &__settings {
+    display: none; // remove
+
+    &.active {
+      display: block;
+    }
+
+    .lk-settings {
+
+      &__title {
+        margin-bottom: 40px;
+      }
+
+
+    }
+  }
+}

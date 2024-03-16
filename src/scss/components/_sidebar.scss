@@ -1,0 +1,99 @@
+.sidebar {
+  padding: 80px 24px;
+  background-color: #fcfbff;
+  min-height: 1025px;
+
+  &__admin {
+    margin-bottom: 48px;
+  }
+}
+
+.admin {
+
+
+  &__info {
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__avatar {
+    display: block;
+    width: 56px;
+    height: 56px;
+    border-radius: 100%;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__name {
+    font-weight: 600;
+    font-size: 18px;
+    color: #000;
+  }
+
+  &__time {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    svg {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+    }
+  }
+}
+
+.sidebar-nav {
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e5e5e5;
+
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    padding: 18.5px 24px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    color: #000;
+    border-radius: 10px;
+    transition: background-color .3s ease-out;
+
+    svg {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+    }
+
+    &.active {
+      background-color: #dbe1ff;
+    }
+
+    &:not(.active) {
+      @include hover {
+        background-color: #f5f5f5;
+      }
+    }
+  }
+}

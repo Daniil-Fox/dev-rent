@@ -1,0 +1,47 @@
+.account {
+  .modal__body {
+    padding: 32px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+
+    .form__label {
+      display: flex;
+      align-items: center;
+      margin-bottom: 32px;
+      gap: 16px;
+      font-weight: 700;
+      font-size: 18px;
+      color: #000;
+    }
+  }
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__current {
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-weight: 700;
+    font-size: 18px;
+    color: #000;
+  }
+
+  &__value {
+    display: flex;
+    align-items: center;
+
+    font-weight: 500;
+    font-size: 16px;
+    color: #000;
+  }
+
+  &__btn {
+    align-self: center;
+  }
+}

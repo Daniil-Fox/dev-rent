@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    <div class="lk-wrapper container">
+      @include('partials/lk-sidebar.html')
+      <div class="lk-content">
+        @include('partials/lk-header.html')
+        <main class="main lk-main">
+          @include('partials/lk-body.html')
+          @include('partials/service-modal.html')
+          @include('partials/account.html')
+        </main>
+      </div>
+    </div>
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

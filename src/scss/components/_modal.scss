@@ -1,0 +1,95 @@
+.modal {
+  background-color: rgba(#000, 0.5);
+  backdrop-filter: blur(4px);
+  position: fixed;
+
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  z-index: -1;
+
+  transition: opacity .3s ease-out, z-index .3s ease-out;
+
+  &.active {
+    z-index: 100;
+    opacity: 1;
+  }
+
+  &__body {
+    background-color: #fff;
+    width: 100%;
+    max-width: 520px;
+    padding: 40px 48px;
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+
+  &__btn {
+    font-weight: 400;
+    font-size: 32px;
+    color: #000;
+    position: relative;
+
+    &:not(.active) {
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 10%;
+        opacity: 0;
+        height: 2px;
+        background-color: #3d55dd;
+        transition: width .3s ease-out, opacity .3s ease-out;
+      }
+    }
+
+    &.active {
+      color: #3d55dd;
+      border-bottom: 2px solid #3d55dd;
+    }
+
+    &:hover {
+      &::after {
+        width: 100%;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__form {
+
+    flex-direction: column;
+    align-items: center;
+    display: none;
+
+    &.active {
+      display: flex;
+    }
+
+    .form__label {
+      width: 360px;
+
+      &:not(:last-of-type) {
+        margin-bottom: 40px;
+      }
+
+      &:last-of-type {
+        margin-bottom: 32px;
+      }
+    }
+
+    .form__btn {
+      padding: 18px 53px;
+      justify-content: center;
+    }
+  }
+}

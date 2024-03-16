@@ -1,0 +1,41 @@
+.lk-header {
+  width: 100%;
+  padding-top: 32px;
+  padding-bottom: 48px;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+  }
+
+  &__btn {
+    margin-left: 32px;
+    margin-right: 24px;
+
+
+  }
+
+  &__account {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    svg {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  &__logout {
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+}

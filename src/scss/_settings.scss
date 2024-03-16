@@ -1,0 +1,268 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.page {
+  height: 100%;
+  font-family: var(--font-family, sans-serif);
+  -webkit-text-size-adjust: 100%;
+}
+
+.page__body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100%;
+  font-size: 16px;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+.site-container {
+  overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
+}
+
+.is-hidden {
+  display: none !important;
+  /* stylelint-disable-line declaration-no-important */
+}
+
+.btn-reset {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.input-reset {
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  border-radius: 0;
+  background-color: #fff;
+
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
+    display: none;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 var(--container-offset);
+  max-width: var(--container-width);
+}
+
+.container-left {
+  padding-left: calc((100% - (calc(var(--container-width) - var(--container-offset)))) / 2);
+
+  @include small-tablet {
+    padding-left: var(--container-offset);
+  }
+}
+
+.container-right {
+  padding-right: calc((100% - (calc(var(--container-width) - var(--container-offset)))) / 2);
+
+  @include small-tablet {
+    padding-right: var(--container-offset);
+  }
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+
+.centered {
+  text-align: center;
+}
+
+.dis-scroll {
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  overscroll-behavior: none;
+}
+
+.page--ios .dis-scroll {
+  position: relative;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 50px;
+  background-color: var(--accent);
+  padding: 18px 32px;
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff;
+  transition: background-color .3s ease-out;
+
+  @include tablet {
+    padding: 14px 26px;
+    font-size: 14px;
+  }
+
+  @include small-tablet {
+    padding: 18px 24px;
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  &:hover {
+    background-color: #2a42cd;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &.focus-visible {
+    background-color: #3d55dd;
+  }
+
+  &:active {
+    background-color: #23209f;
+  }
+}
+
+.title2 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 120%;
+  color: #000;
+
+  @media (max-width: 1600px) {
+    font-size: 50px;
+  }
+
+  @include big-desktop {
+    font-size: 42px;
+  }
+
+  @include tablet {
+    font-size: 36px;
+  }
+
+  @include small-tablet {
+    font-size: 32px;
+  }
+}
+
+h2 {
+  margin: 0;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 120%;
+  color: #000;
+
+  @include big-desktop {
+    font-size: 42px;
+  }
+
+}
+
+h3 {
+  margin: 0;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 32px;
+  color: #000;
+
+  @include big-desktop {
+    font-size: 28px;
+  }
+
+  @include tablet {
+    font-size: 24px;
+  }
+}
+
+h4 {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 24px;
+  color: #000;
+}
+
+.lk-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.lk-main {
+  flex-grow: 1;
+}
+
+.lk-content {
+  grid-column: 3 span;
+  display: flex;
+  flex-direction: column;
+}
+
+.p1 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 18px;
+  color: #000;
+}
+
+.p2 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #000;
+}
+
+.p3 {
+  font-weight: 400;
+  font-size: 16px;
+  color: #000;
+}
+
+.fw-500 {
+  font-weight: 500;
+}

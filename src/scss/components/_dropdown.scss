@@ -1,0 +1,14 @@
+.dropdown {
+  box-sizing: content-box;
+  overflow: hidden;
+  max-height: 0;
+  will-change: max-height;
+  background-color: #fff;
+  transition: max-height .3s ease-out;
+
+  &__item {
+    cursor: pointer;
+    padding: 16px;
+    border-radius: 20px;
+  }
+}

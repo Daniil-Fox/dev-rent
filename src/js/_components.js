@@ -1,0 +1,7 @@
+import './components/sliders'
+import './components/select'
+import './components/account'
+import './components/progress'
+import './components/sites-tabs'
+import './components/login'
+import './components/modal-service'

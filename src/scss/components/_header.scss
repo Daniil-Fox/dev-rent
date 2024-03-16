@@ -1,0 +1,113 @@
+.header {
+  padding: 24px 0;
+
+  @include big-desktop {
+    padding: 18px 0;
+  }
+
+  &__burger {
+    display: none;
+    width: 32px;
+    height: 32px;
+    align-items: center;
+    justify-content: center;
+    background-color: #3d55dd;
+    border-radius: 100%;
+
+    .line {
+      position: relative;
+      width: 16px;
+      height: 1px;
+      background-color: #fff;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+      }
+
+      &::before {
+        top: -4px;
+      }
+
+      &::after {
+        top: 4px;
+      }
+    }
+
+    @include small-tablet {
+      display: flex;
+    }
+  }
+
+  &__logo {
+    width: 162px;
+
+    @include big-desktop {
+      width: 150px;
+    }
+
+    @include tablet {
+      width: 130px;
+    }
+
+    svg {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: 46px;
+
+    @include tablet {
+      gap: 20px;
+    }
+  }
+
+  &__btn {
+    &--connect {
+      @include small-tablet {
+        display: none;
+      }
+    }
+
+    &--login {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      font-weight: 400;
+      font-size: 16px;
+      color: #000;
+
+      @include tablet {
+        font-size: 14px;
+      }
+
+      svg {
+        width: 32px;
+        height: 32px;
+        object-fit: contain;
+
+        @include tablet {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
+
+}
