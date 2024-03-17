@@ -68,6 +68,10 @@
 }
 
 .ben-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
   width: 100%;
   max-width: 382px;
   padding: 32px 27px;
