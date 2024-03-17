@@ -422,6 +422,19 @@ h4 {
   background-color: #fff6f6;
 }
 
+.order-modal .modal__body {
+  max-width: 610px;
+  padding: 56px;
+  text-align: center;
+}
+.order-modal__title {
+  margin: 0;
+  margin-bottom: 16px;
+}
+.order-modal__desc {
+  margin: 0;
+}
+
 .header {
   padding: 24px 0;
 }
@@ -1253,6 +1266,14 @@ h4 {
     display: block;
   }
 }
+@media (max-width: 425px) {
+  .cta__rectangles {
+    bottom: -20px;
+    right: -20px;
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+  }
+}
 .cta__rec {
   width: 669px;
   height: 209px;
@@ -1270,15 +1291,37 @@ h4 {
     height: 160px;
   }
 }
+@media (max-width: 425px) {
+  .cta__rec {
+    height: 150px;
+    width: 200px;
+  }
+}
 .cta__rec:nth-child(1) {
   position: absolute;
   bottom: 200px;
   left: 200px;
 }
+@media (max-width: 425px) {
+  .cta__rec:nth-child(1) {
+    height: 200px;
+    width: 125px;
+    bottom: 0;
+    left: 0;
+  }
+}
 .cta__rec:nth-child(2) {
   position: absolute;
   bottom: 100px;
   left: 150px;
+}
+@media (max-width: 425px) {
+  .cta__rec:nth-child(2) {
+    height: 270px;
+    width: 60px;
+    bottom: 0;
+    left: 0;
+  }
 }
 .cta__form {
   display: -ms-grid;

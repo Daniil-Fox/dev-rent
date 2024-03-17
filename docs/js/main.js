@@ -530,8 +530,29 @@ window.addEventListener('DOMContentLoaded', () => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _functions_validate_forms__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../functions/validate-forms */ "./src/js/functions/validate-forms.js");
 
-const afterForm = () => {
-  console.log('Произошла отправка, тут можно писать любые действия');
+const orderModal = document.querySelectorAll('.order-modal');
+if (orderModal && orderModal.length > 0) {
+  orderModal.forEach(el => {
+    const body = el.querySelector('.modal__body');
+    const close = el.querySelector('.modal__close');
+    close.addEventListener('click', e => {
+      el.classList.remove('active');
+    });
+    el.addEventListener('click', e => {
+      el.classList.remove('active');
+    });
+    body.addEventListener('click', e => {
+      e.stopPropagation();
+    });
+  });
+}
+const afterCorrects = () => {
+  const correctsModal = document.querySelector('.corrects-modal-thanks');
+  correctsModal.classList.add('active');
+};
+const afterOrder = () => {
+  const orderModal = document.querySelector('.order-modal-thanks');
+  orderModal.classList.add('active');
 };
 if (document.querySelector('.cta__form')) {
   const ctaRules = [{
@@ -580,7 +601,7 @@ if (document.querySelector('.cta__form')) {
       rule: 'required'
     }]
   }];
-  (0,_functions_validate_forms__WEBPACK_IMPORTED_MODULE_0__.validateForms)('.cta__form', ctaRules, afterForm);
+  (0,_functions_validate_forms__WEBPACK_IMPORTED_MODULE_0__.validateForms)('.cta__form', ctaRules);
 }
 if (document.querySelector('.login-form')) {
   const loginRules = [{
@@ -598,7 +619,7 @@ if (document.querySelector('.login-form')) {
       rule: 'password'
     }]
   }];
-  (0,_functions_validate_forms__WEBPACK_IMPORTED_MODULE_0__.validateForms)('.login-form', loginRules, afterForm);
+  (0,_functions_validate_forms__WEBPACK_IMPORTED_MODULE_0__.validateForms)('.login-form', loginRules);
 }
 if (document.querySelector('.logup-form')) {
   const logupRules = [{
@@ -635,7 +656,7 @@ if (document.querySelector('.logup-form')) {
       errorMessage: 'Заполните телефон!'
     }]
   }];
-  (0,_functions_validate_forms__WEBPACK_IMPORTED_MODULE_0__.validateForms)('.logup-form', logupRules, afterForm);
+  (0,_functions_validate_forms__WEBPACK_IMPORTED_MODULE_0__.validateForms)('.logup-form', logupRules);
 }
 if (document.querySelector('.settings-form')) {
   const settingsRules = [{
@@ -658,7 +679,7 @@ if (document.querySelector('.settings-form')) {
       errorMessage: 'Passwords should be the same'
     }]
   }];
-  (0,_functions_validate_forms__WEBPACK_IMPORTED_MODULE_0__.validateForms)('.settings-form', settingsRules, afterForm);
+  (0,_functions_validate_forms__WEBPACK_IMPORTED_MODULE_0__.validateForms)('.settings-form', settingsRules);
 }
 if (document.querySelector('.support-form')) {
   const supportsRules = [{
@@ -688,7 +709,36 @@ if (document.querySelector('.support-form')) {
       value: true
     }]
   }];
-  (0,_functions_validate_forms__WEBPACK_IMPORTED_MODULE_0__.validateForms)('.support-form', supportsRules, afterForm);
+  (0,_functions_validate_forms__WEBPACK_IMPORTED_MODULE_0__.validateForms)('.support-form', supportsRules);
+}
+if (document.querySelector('.correct__form')) {
+  const correctRules = [{
+    ruleSelector: '.input-wish',
+    rules: [{
+      rule: 'minLength',
+      value: 3
+    }, {
+      rule: 'required'
+    }]
+  }];
+  (0,_functions_validate_forms__WEBPACK_IMPORTED_MODULE_0__.validateForms)('.correct__form', correctRules, afterCorrects);
+}
+if (document.querySelector('.service-modal')) {
+  const servicesRules = [{
+    ruleSelector: '.input-name',
+    rules: [{
+      rule: 'required'
+    }]
+  }, {
+    ruleSelector: '.input-wish',
+    rules: [{
+      rule: 'minLength',
+      value: 3
+    }, {
+      rule: 'required'
+    }]
+  }];
+  (0,_functions_validate_forms__WEBPACK_IMPORTED_MODULE_0__.validateForms)('.service-modal__form', servicesRules, afterOrder);
 }
 
 /***/ }),

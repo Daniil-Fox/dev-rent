@@ -1,7 +1,31 @@
 import { validateForms } from './../functions/validate-forms';
 
-const afterForm = () => {
-  console.log('Произошла отправка, тут можно писать любые действия');
+const orderModal = document.querySelectorAll('.order-modal')
+if(orderModal && orderModal.length > 0){
+  orderModal.forEach(el => {
+    const body = el.querySelector('.modal__body')
+    const close = el.querySelector('.modal__close')
+
+    close.addEventListener('click', e => {
+      el.classList.remove('active')
+    })
+    el.addEventListener('click', e => {
+      el.classList.remove('active')
+    })
+    body.addEventListener('click', e => {
+      e.stopPropagation()
+    })
+  })
+}
+
+const afterCorrects = () => {
+  const correctsModal = document.querySelector('.corrects-modal-thanks')
+  correctsModal.classList.add('active')
+};
+
+const afterOrder = () => {
+  const orderModal = document.querySelector('.order-modal-thanks')
+  orderModal.classList.add('active')
 };
 
 if(document.querySelector('.cta__form')){
@@ -73,7 +97,7 @@ if(document.querySelector('.cta__form')){
       ]
     },
   ];
-  validateForms('.cta__form', ctaRules, afterForm);
+  validateForms('.cta__form', ctaRules);
 }
 if(document.querySelector('.login-form')){
   const loginRules = [
@@ -100,7 +124,7 @@ if(document.querySelector('.login-form')){
       ]
     }
   ];
-  validateForms('.login-form', loginRules, afterForm);
+  validateForms('.login-form', loginRules);
 }
 
 if(document.querySelector('.logup-form')){
@@ -154,7 +178,7 @@ if(document.querySelector('.logup-form')){
       ]
     },
   ];
-  validateForms('.logup-form', logupRules, afterForm);
+  validateForms('.logup-form', logupRules);
 }
 
 if(document.querySelector('.settings-form')){
@@ -192,7 +216,7 @@ if(document.querySelector('.settings-form')){
     },
   ]
 
-  validateForms('.settings-form', settingsRules, afterForm);
+  validateForms('.settings-form', settingsRules);
 }
 if(document.querySelector('.support-form')){
   const supportsRules = [
@@ -235,5 +259,53 @@ if(document.querySelector('.support-form')){
       ]
     },
   ]
-  validateForms('.support-form', supportsRules, afterForm);
+  validateForms('.support-form', supportsRules);
+}
+if(document.querySelector('.correct__form')){
+  const correctRules = [
+    {
+      ruleSelector: '.input-wish',
+      rules: [
+
+        {
+          rule: 'minLength',
+          value: 3
+        },
+        {
+          rule: 'required',
+        },
+
+      ]
+    },
+
+  ]
+  validateForms('.correct__form', correctRules, afterCorrects);
+}
+if(document.querySelector('.service-modal')){
+  const servicesRules = [
+    {
+      ruleSelector: '.input-name',
+      rules: [
+        {
+          rule: 'required'
+        }
+      ]
+    },
+    {
+      ruleSelector: '.input-wish',
+      rules: [
+
+        {
+          rule: 'minLength',
+          value: 3
+        },
+        {
+          rule: 'required',
+        },
+
+      ]
+    },
+
+  ]
+  validateForms('.service-modal__form', servicesRules, afterOrder);
 }

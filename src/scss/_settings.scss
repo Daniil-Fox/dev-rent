@@ -297,3 +297,21 @@ h4 {
     }
   }
 }
+
+// order-modal
+.order-modal {
+  .modal__body {
+    max-width: 610px;
+    padding: 56px;
+    text-align: center;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 16px;
+  }
+
+  &__desc {
+    margin: 0;
+  }
+}
