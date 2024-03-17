@@ -26,6 +26,13 @@
   <div class="site-container">
     <div class="lk-wrapper container">
       <aside class="sidebar">
+  <div class="sidebar__close">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M19.5449 17.954C19.7563 18.1653 19.875 18.452 19.875 18.7509C19.875 19.0497 19.7563 19.3364 19.5449 19.5477C19.3336 19.7591 19.0469 19.8778 18.748 19.8778C18.4492 19.8778 18.1625 19.7591 17.9512 19.5477L11.999 13.5937L6.04492 19.5459C5.83358 19.7572 5.54693 19.8759 5.24805 19.8759C4.94916 19.8759 4.66251 19.7572 4.45117 19.5459C4.23983 19.3345 4.12109 19.0479 4.12109 18.749C4.12109 18.4501 4.23983 18.1635 4.45117 17.9521L10.4052 11.9999L4.45305 6.04586C4.2417 5.83451 4.12297 5.54787 4.12297 5.24898C4.12297 4.9501 4.2417 4.66345 4.45305 4.45211C4.66439 4.24076 4.95103 4.12203 5.24992 4.12203C5.54881 4.12203 5.83545 4.24076 6.0468 4.45211L11.999 10.4062L17.953 4.45117C18.1644 4.23983 18.451 4.12109 18.7499 4.12109C19.0488 4.12109 19.3354 4.23983 19.5468 4.45117C19.7581 4.66251 19.8769 4.94916 19.8769 5.24804C19.8769 5.54693 19.7581 5.83358 19.5468 6.04492L13.5927 11.9999L19.5449 17.954Z"
+        fill="#3D55DD" />
+    </svg>
+  </div>
   <div class="sidebar__admin admin">
     <div class="admin__info">
       <div class="admin__avatar">
@@ -97,6 +104,14 @@
       <div class="lk-content">
         <header class="lk-header">
   <div class="lk-header__container">
+    <button class="btn-reset lk-header__admin">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="32" height="32" rx="16" fill="#3D55DD" />
+        <path
+          d="M15.9987 7.33337C17.148 7.33337 18.2502 7.78992 19.0628 8.60258C19.8755 9.41524 20.332 10.5174 20.332 11.6667C20.332 12.816 19.8755 13.9182 19.0628 14.7308C18.2502 15.5435 17.148 16 15.9987 16C14.8494 16 13.7472 15.5435 12.9346 14.7308C12.1219 13.9182 11.6654 12.816 11.6654 11.6667C11.6654 10.5174 12.1219 9.41524 12.9346 8.60258C13.7472 7.78992 14.8494 7.33337 15.9987 7.33337ZM15.9987 18.1667C20.787 18.1667 24.6654 20.1059 24.6654 22.5V24.6667H7.33203V22.5C7.33203 20.1059 11.2104 18.1667 15.9987 18.1667Z"
+          fill="white" />
+      </svg>
+    </button>
     <a href="./" class="lk-header__logo header__logo">
       <svg width="162" height="32" viewBox="0 0 162 32" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
@@ -179,12 +194,13 @@
               <div class="lk-card__info lk-info">
                 <div class="lk-info__chars">
                   <div class="lk-info__char">
-                    <span class="lk-info__capture">Срок:</span>
-                    <span class="lk-info__info">12 дней</span>
+                    <span class="lk-info__capture">Дата разработки:
+                    </span>
+                    <span class="lk-info__info">12.01.22</span>
                   </div>
                   <div class="lk-info__char">
-                    <span class="lk-info__capture">Этап:</span>
-                    <span class="lk-info__info">Верстка сайта</span>
+                    <span class="lk-info__capture">Домен:</span>
+                    <span class="lk-info__info">.ru до 12.01.25</span>
                   </div>
                   <div class="lk-info__char">
                     <span class="lk-info__capture">Оплачено:</span>
@@ -199,7 +215,7 @@
               </div>
 
               <div class="lk-card__link">
-                <button class="btn-reset btn lk-card__button">
+                <button class="btn-reset btn lk-card__button" data-lk-content="services">
                   <span>Дополнительные услуги</span>
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -554,15 +570,15 @@
       У вас есть вопросы или предложения? Заполните форму
       и наш оператор ответит вамв течение нескольких минут
     </p>
-    <form action="#" class="form lk-support__form">
+    <form action="#" class="form lk-support__form support-form">
       <label class="form__label">
-        <input type="text" placeholder="Ваше имя" class="form__input">
+        <input type="text" placeholder="Ваше имя" class="form__input input-name">
       </label>
       <label class="form__label">
-        <input type="email" placeholder="Email" class="form__input">
+        <input type="email" placeholder="Email" class="form__input input-email">
       </label>
       <label class="form__label form__label--big">
-        <textarea type="text" placeholder="Email" class="form__input form__textarea"></textarea>
+        <textarea type="text" placeholder="Задайте свой вопрос" class="form__input form__textarea input-que"></textarea>
       </label>
       <button class="btn-reset btn form__btn">
         <span>Отправить</span>
@@ -577,19 +593,19 @@
 
   <div class="lk-settings lk-body__settings lk-content" id="settings">
     <h3 class="lk-settings__title">Смена пароля</h3>
-    <form action="#" class="form lk-support__form">
+    <form action="#" class="form lk-support__form settings-form">
       <label class="form__label">
         <input type="password" placeholder="Старый пароль" class="form__input">
       </label>
       <label class="form__label">
-        <input type="password" placeholder="Новый пароль" class="form__input">
+        <input type="password" placeholder="Новый пароль" id="new-pass" class="form__input input-new-password">
       </label>
-      <label class="form__label form__label--big">
-        <textarea type="password" placeholder="Повторить пароль" class="form__input form__textarea"></textarea>
+      <label class="form__label">
+        <input type="password" placeholder="Повторить пароль" id="new-pass-repeat"
+          class="form__input input-new-password-repeat">
       </label>
       <button class="btn-reset btn form__btn">
         <span>Сохранить</span>
-
       </button>
     </form>
   </div>
@@ -719,21 +735,6 @@
           </article>
         </div>
 
-      </div>
-
-      <div class="lk-sites__control">
-        <div class="lk-sites__navigate lk-sites__navigate--prev services-prev">
-          <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd"
-              d="M2.11328 20L13.7213 8.38934L15.6093 10.2747L7.21728 18.6667L37.3319 18.6667V21.3333L7.21728 21.3333L15.6093 29.7227L13.7213 31.6107L2.11328 20Z" />
-          </svg>
-        </div>
-        <div class="lk-sites__navigate lk-sites__navigate--next services-next">
-          <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd"
-              d="M37.8867 20L26.2787 31.6107L24.3907 29.7253L32.7827 21.3333L2.66805 21.3333V18.6667L32.7827 18.6667L24.3907 10.2773L26.2787 8.38933L37.8867 20Z" />
-          </svg>
-        </div>
       </div>
     </div>
   </div>

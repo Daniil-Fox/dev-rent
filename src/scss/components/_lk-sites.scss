@@ -8,6 +8,11 @@
     display: block;
   }
 
+  &__slider {
+    max-width: 100%;
+    min-width: 0;
+  }
+
   &__content {
     display: none;
     position: relative;

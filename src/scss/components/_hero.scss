@@ -74,26 +74,10 @@
       position: absolute;
       bottom: 0;
       left: 0;
-      height: 250px;
+      height: 120%;
       width: calc(100% - 90px);
       background-color: #fff;
       border-top-right-radius: 20px;
-
-      @include big-desktop {
-        height: 230px;
-      }
-
-      @include tablet {
-        height: 200px;
-      }
-
-      @include small-tablet {
-        height: 140px;
-      }
-
-      @include mobile {
-        height: 120px;
-      }
     }
 
     @include big-desktop {

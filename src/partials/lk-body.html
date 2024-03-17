@@ -20,12 +20,13 @@
               <div class="lk-card__info lk-info">
                 <div class="lk-info__chars">
                   <div class="lk-info__char">
-                    <span class="lk-info__capture">Срок:</span>
-                    <span class="lk-info__info">12 дней</span>
+                    <span class="lk-info__capture">Дата разработки:
+                    </span>
+                    <span class="lk-info__info">12.01.22</span>
                   </div>
                   <div class="lk-info__char">
-                    <span class="lk-info__capture">Этап:</span>
-                    <span class="lk-info__info">Верстка сайта</span>
+                    <span class="lk-info__capture">Домен:</span>
+                    <span class="lk-info__info">.ru до 12.01.25</span>
                   </div>
                   <div class="lk-info__char">
                     <span class="lk-info__capture">Оплачено:</span>
@@ -40,7 +41,7 @@
               </div>
 
               <div class="lk-card__link">
-                <button class="btn-reset btn lk-card__button">
+                <button class="btn-reset btn lk-card__button" data-lk-content="services">
                   <span>Дополнительные услуги</span>
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -396,15 +397,15 @@
       У вас есть вопросы или предложения? Заполните форму
       и наш оператор ответит вамв течение нескольких минут
     </p>
-    <form action="#" class="form lk-support__form">
+    <form action="#" class="form lk-support__form support-form">
       <label class="form__label">
-        <input type="text" placeholder="Ваше имя" class="form__input">
+        <input type="text" placeholder="Ваше имя" class="form__input input-name">
       </label>
       <label class="form__label">
-        <input type="email" placeholder="Email" class="form__input">
+        <input type="email" placeholder="Email" class="form__input input-email">
       </label>
       <label class="form__label form__label--big">
-        <textarea type="text" placeholder="Email" class="form__input form__textarea"></textarea>
+        <textarea type="text" placeholder="Задайте свой вопрос" class="form__input form__textarea input-que"></textarea>
       </label>
       <button class="btn-reset btn form__btn">
         <span>Отправить</span>
@@ -419,19 +420,19 @@
 
   <div class="lk-settings lk-body__settings lk-content" id="settings">
     <h3 class="lk-settings__title">Смена пароля</h3>
-    <form action="#" class="form lk-support__form">
+    <form action="#" class="form lk-support__form settings-form">
       <label class="form__label">
         <input type="password" placeholder="Старый пароль" class="form__input">
       </label>
       <label class="form__label">
-        <input type="password" placeholder="Новый пароль" class="form__input">
+        <input type="password" placeholder="Новый пароль" id="new-pass" class="form__input input-new-password">
       </label>
-      <label class="form__label form__label--big">
-        <textarea type="password" placeholder="Повторить пароль" class="form__input form__textarea"></textarea>
+      <label class="form__label">
+        <input type="password" placeholder="Повторить пароль" id="new-pass-repeat"
+          class="form__input input-new-password-repeat">
       </label>
       <button class="btn-reset btn form__btn">
         <span>Сохранить</span>
-
       </button>
     </form>
   </div>
@@ -562,21 +563,6 @@
           </article>
         </div>
 
-      </div>
-
-      <div class="lk-sites__control">
-        <div class="lk-sites__navigate lk-sites__navigate--prev services-prev">
-          <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd"
-              d="M2.11328 20L13.7213 8.38934L15.6093 10.2747L7.21728 18.6667L37.3319 18.6667V21.3333L7.21728 21.3333L15.6093 29.7227L13.7213 31.6107L2.11328 20Z" />
-          </svg>
-        </div>
-        <div class="lk-sites__navigate lk-sites__navigate--next services-next">
-          <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd"
-              d="M37.8867 20L26.2787 31.6107L24.3907 29.7253L32.7827 21.3333L2.66805 21.3333V18.6667L32.7827 18.6667L24.3907 10.2773L26.2787 8.38933L37.8867 20Z" />
-          </svg>
-        </div>
       </div>
     </div>
   </div>

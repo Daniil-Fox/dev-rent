@@ -4,25 +4,24 @@
       <button class="btn-reset modal__btn active" data-modal-type="login">Авторизация</button>
       <button class="btn-reset modal__btn" data-modal-type="logup">Регистрация</button>
     </div>
-    <form class="modal__form form active" data-modal-content="login">
+    <form class="modal__form form active login-form" data-modal-content="login">
       <label class="form__label">
-        <input type="email" class="form__input" placeholder="Email">
+        <input type="email" class="form__input input-email" placeholder="Email">
       </label>
       <label class="form__label">
-        <input type="email" class="form__input" placeholder="Пароль">
+        <input type="email" class="form__input input-password" placeholder="Пароль">
       </label>
-
       <button class="btn-reset btn form__btn">Войти</button>
     </form>
-    <form class="modal__form form" data-modal-content="logup">
+    <form class="modal__form form logup-form" data-modal-content="logup">
       <label class="form__label">
-        <input type="text" class="form__input" placeholder="Ваше имя">
+        <input type="text" class="form__input input-name" placeholder="Ваше имя">
       </label>
       <label class="form__label">
-        <input type="text" class="form__input" placeholder="Никнейм">
+        <input type="text" class="form__input input-nikname" placeholder="Никнейм">
       </label>
       <label class="form__label">
-        <input type="email" class="form__input" placeholder="Email">
+        <input type="email" class="form__input input-email" placeholder="Email">
       </label>
       <label class="form__label">
         <i class="form__flag">
@@ -43,7 +42,7 @@
             </defs>
           </svg>
         </i>
-        <input type="tel" class="form__input" placeholder="+7 (999) 999-99-99 ">
+        <input type="tel" class="form__input input-tel" placeholder="+7 (999) 999-99-99 ">
       </label>
 
       <button class="btn-reset btn form__btn">Зарегистрироваться</button>

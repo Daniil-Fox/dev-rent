@@ -3,6 +3,9 @@
   background-color: #fdfdfd;
   height: 100%;
 
+  @include tablet {
+    padding: 32px 0;
+  }
 
   &__settings {
     display: none; // remove

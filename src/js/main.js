@@ -14,17 +14,22 @@ sitesItems.forEach(items => {
   }
 })
 
-const lkMenuButtons = document.querySelectorAll('.lk-menu-btn')
+const lkMenuButtons = document.querySelectorAll('[data-lk-content]')
 const lkContent = document.querySelectorAll('.lk-content')
 
+const lkAdmin = document.querySelector('.lk-header__admin')
+const sidebarClose = document.querySelector('.sidebar__close')
+const sidebar = document.querySelector('.sidebar')
 lkMenuButtons.forEach(btn => {
   btn.addEventListener('click', e => {
     clearActive()
     const dataset = btn.dataset.lkContent
     const content = document.getElementById(dataset)
     content.classList.add('active')
-
+    document.querySelector(`.lk-menu-btn[data-lk-content="${dataset}"]`).classList.add('active')
     e.currentTarget.classList.add('active')
+
+    sidebar.classList.remove('active')
   })
 
 })
@@ -33,3 +38,11 @@ function clearActive(){
   lkMenuButtons.forEach(el => el.classList.remove('active'))
   lkContent.forEach(el => el.classList.remove('active'))
 }
+
+
+lkAdmin?.addEventListener('click', e => {
+  sidebar.classList.add('active')
+})
+sidebarClose?.addEventListener('click', e => {
+  sidebar.classList.remove('active')
+})

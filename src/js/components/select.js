@@ -16,6 +16,7 @@ select.forEach(s => {
       const content = el.textContent.trim()
       selectText.innerText = content
       dropdown.style.maxHeight = null
+      s.classList.remove('active')
     })
   })
 })

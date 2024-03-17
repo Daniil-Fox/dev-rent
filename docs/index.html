@@ -234,9 +234,9 @@
           <h3 class="ben-item__title">Администрирование
             сайта</h3>
           <p class="ben-item__desc p3">
-            Обеспечим круглосуточный удаленный
-            мониторинг и анализ всей системы
-            вашего сайта на серверах предоставленных нами, либо на ваших
+            Разрабатываем чат-ботов,
+            которые помогут вам полностью
+            автоматизировать ваши бизнес-процессы.
           </p>
         </div>
       </div>
@@ -271,8 +271,9 @@
           <h3 class="ben-item__title">Разработка ботов
             для телеграмма</h3>
           <p class="ben-item__desc p3">
-            Разработка ботов
-            для телеграмма
+            Разрабатываем чат-ботов,
+            которые помогут вам полностью
+            автоматизировать ваши бизнес-процессы.
           </p>
         </div>
       </div>
@@ -430,7 +431,7 @@
 
     <form action="post" class="form cta__form">
       <label class="form__label">
-        <input type="text" placeholder="Ваше имя" class="form__input">
+        <input type="text" placeholder="Ваше имя" class="form__input input-name">
       </label>
 
       <!-- <select name="" id=""></select> -->
@@ -454,7 +455,7 @@
         </div>
       </div>
       <label class="form__label">
-        <input type="email" placeholder="Email" class="form__input">
+        <input type="email" placeholder="Email" class="form__input input-email">
       </label>
       <label class="form__label">
         <span class="form__flag">
@@ -475,14 +476,13 @@
             </defs>
           </svg>
         </span>
-        <input type="tel" placeholder="+7 (999) 999-99-99 " class="form__input">
+        <input type="tel" placeholder="+7 (999) 999-99-99 " class="form__input input-tel">
       </label>
 
-      <textarea class="form__textarea cta__textarea" placeholder="Расскажите что вам необходимо">
-      </textarea>
+      <textarea class="form__textarea cta__textarea input-area" placeholder="Расскажите что вам необходимо"></textarea>
 
       <span class="form__agreement">
-        <input type="checkbox" id="check" class="form__checkbox" name="agreement">
+        <input type="checkbox" id="check" class="form__checkbox input-checkbox" name="agreement">
 
         <label for="check" class="form__fake-label"><span class="form__fake-checkbox">
             <svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -518,25 +518,24 @@
       <button class="btn-reset modal__btn active" data-modal-type="login">Авторизация</button>
       <button class="btn-reset modal__btn" data-modal-type="logup">Регистрация</button>
     </div>
-    <form class="modal__form form active" data-modal-content="login">
+    <form class="modal__form form active login-form" data-modal-content="login">
       <label class="form__label">
-        <input type="email" class="form__input" placeholder="Email">
+        <input type="email" class="form__input input-email" placeholder="Email">
       </label>
       <label class="form__label">
-        <input type="email" class="form__input" placeholder="Пароль">
+        <input type="email" class="form__input input-password" placeholder="Пароль">
       </label>
-
       <button class="btn-reset btn form__btn">Войти</button>
     </form>
-    <form class="modal__form form" data-modal-content="logup">
+    <form class="modal__form form logup-form" data-modal-content="logup">
       <label class="form__label">
-        <input type="text" class="form__input" placeholder="Ваше имя">
+        <input type="text" class="form__input input-name" placeholder="Ваше имя">
       </label>
       <label class="form__label">
-        <input type="text" class="form__input" placeholder="Никнейм">
+        <input type="text" class="form__input input-nikname" placeholder="Никнейм">
       </label>
       <label class="form__label">
-        <input type="email" class="form__input" placeholder="Email">
+        <input type="email" class="form__input input-email" placeholder="Email">
       </label>
       <label class="form__label">
         <i class="form__flag">
@@ -557,7 +556,7 @@
             </defs>
           </svg>
         </i>
-        <input type="tel" class="form__input" placeholder="+7 (999) 999-99-99 ">
+        <input type="tel" class="form__input input-tel" placeholder="+7 (999) 999-99-99 ">
       </label>
 
       <button class="btn-reset btn form__btn">Зарегистрироваться</button>

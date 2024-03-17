@@ -25,6 +25,14 @@ new Swiper('.lk-sites__inactive', {
   navigation : {
     prevEl: '.inactive-prev',
     nextEl: '.inactive-next',
+  },
+  breakpoints : {
+    320 : {
+      slidesPerView: 1,
+    },
+    769 : {
+      slidesPerView: 2,
+    }
   }
 })
 new Swiper('.lk-sites__slider', {
@@ -38,21 +46,47 @@ new Swiper('.lk-sites__slider', {
   navigation : {
     prevEl: '.indev-prev',
     nextEl: '.indev-next',
-  }
-})
-new Swiper('.lk-services__slider', {
-  modules: [Navigation, Grid],
-  spaceBetween: 32,
-  grid: {
-    rows: 3,
-    fill: "row",
   },
-  slidesPerView: 3,
-  navigation : {
-    prevEl: '.services-prev',
-    nextEl: '.services-next',
+  breakpoints : {
+    320 : {
+      slidesPerView: 1,
+    },
+    769 : {
+      slidesPerView: 2,
+    }
   }
 })
+// new Swiper('.lk-services__slider', {
+//   modules: [Navigation, Grid],
+//   spaceBetween: 32,
+//   grid: {
+//     rows: 3,
+//     fill: "row",
+//   },
+//   slidesPerView: 3,
+//   navigation : {
+//     prevEl: '.services-prev',
+//     nextEl: '.services-next',
+//   },
+//   breakpoints : {
+//     320 : {
+//       grid: {
+//         rows: 1,
+//         fill: "row",
+//       },
+//     },
+//     768 : {
+//       slidesPerView: 2,
+//     },
+//     1441 : {
+//       slidesPerView: 3,
+//       grid: {
+//         rows: 3,
+//         fill: "row",
+//       },
+//     }
+//   }
+// })
 
 
 
