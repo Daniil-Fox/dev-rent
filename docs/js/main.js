@@ -16346,14 +16346,20 @@ sidebarClose?.addEventListener('click', e => {
   sidebar.classList.remove('active');
 });
 const burgerMenuBtn = document.querySelector('.header__burger');
-const burgerMenuClose = document.querySelector('.burger-menu__close');
 const burgerMenu = document.querySelector('.burger-menu');
+const burgerMenuClose = burgerMenu.querySelector('.burger-menu__close');
+const burgerLinks = burgerMenu.querySelectorAll('.nav__link');
 if (burgerMenu) {
   burgerMenuBtn.addEventListener('click', e => {
     burgerMenu.classList.add('active');
   });
   burgerMenuClose.addEventListener('click', e => {
     burgerMenu.classList.remove('active');
+  });
+  burgerLinks.forEach(link => {
+    link.addEventListener('click', e => {
+      burgerMenu.classList.remove('active');
+    });
   });
 }
 })();
