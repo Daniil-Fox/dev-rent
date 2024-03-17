@@ -5,6 +5,14 @@
   position: relative;
   z-index: 1;
 
+  &__real-select {
+    position: absolute;
+    left: -2000px;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+
   &__bg {
     background-color: #fcfbff;
     position: absolute;

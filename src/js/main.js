@@ -46,3 +46,17 @@ lkAdmin?.addEventListener('click', e => {
 sidebarClose?.addEventListener('click', e => {
   sidebar.classList.remove('active')
 })
+
+
+const burgerMenuBtn = document.querySelector('.header__burger')
+const burgerMenuClose = document.querySelector('.burger-menu__close')
+const burgerMenu = document.querySelector('.burger-menu')
+
+if(burgerMenu){
+  burgerMenuBtn.addEventListener('click', e => {
+    burgerMenu.classList.add('active')
+  })
+  burgerMenuClose.addEventListener('click', e => {
+    burgerMenu.classList.remove('active')
+  })
+}

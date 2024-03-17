@@ -1,4 +1,5 @@
 const select = document.querySelectorAll('.select')
+const realSelect = document.querySelector('.cta__real-select')
 
 select.forEach(s => {
   const btn = s.querySelector('.select__header')
@@ -11,10 +12,13 @@ select.forEach(s => {
     dropdown.style.maxHeight = isActive ? dropdown.scrollHeight + 'px' : null
   })
 
-  dropdownItems.forEach(el => {
+  dropdownItems.forEach((el,i) => {
     el.addEventListener('click', e => {
       const content = el.textContent.trim()
       selectText.innerText = content
+      realSelect.value = content
+      console.log(realSelect);
+      console.log(realSelect.value);
       dropdown.style.maxHeight = null
       s.classList.remove('active')
     })

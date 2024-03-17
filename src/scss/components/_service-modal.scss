@@ -28,12 +28,20 @@
     span {
       flex-shrink: 0;
     }
+
+    @include small-tablet {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
-  &__value {
+  &__value,
+  &__text {
     flex-grow: 1;
     font-weight: 400;
     font-size: 24px;
     color: #000;
+    width: 100%;
   }
+
 }

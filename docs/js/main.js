@@ -177,12 +177,18 @@ __webpack_require__.r(__webpack_exports__);
 
 const accountModal = document.querySelector('.account');
 if (accountModal) {
-  const accBtn = document.querySelector('.lk-header__account');
+  const accBtn = document.querySelectorAll('.lk-header__account');
   const accountModalBody = accountModal.querySelector('.modal__body');
-  accBtn.addEventListener('click', e => {
-    accountModal.classList.add('active');
+  const accountModalClose = accountModal.querySelector('.modal__close');
+  accBtn.forEach(btn => {
+    btn.addEventListener('click', e => {
+      accountModal.classList.add('active');
+    });
   });
   accountModal.addEventListener('click', e => {
+    accountModal.classList.remove('active');
+  });
+  accountModalClose.addEventListener('click', e => {
     accountModal.classList.remove('active');
   });
   accountModalBody.addEventListener('click', e => {
@@ -202,12 +208,25 @@ const correctsModal = document.querySelector('.correct');
 if (correctsModal) {
   const correctsBtn = document.querySelectorAll('[data-correct-btn]');
   const correctsModalBody = correctsModal.querySelector('.modal__body');
+  const correctsModalClose = correctsModal.querySelector('.modal__close');
+  const correctsList = correctsModal.querySelectorAll('.correct__list');
   correctsBtn.forEach(btn => {
     btn.addEventListener('click', e => {
       correctsModal.classList.add('active');
     });
   });
+  function checkList(correctsList) {
+    if (correctsList.children.length == 1) {
+      correctsList.querySelector('.text').classList.add('active');
+    }
+  }
+  correctsList.forEach(list => {
+    checkList(list);
+  });
   correctsModal.addEventListener('click', e => {
+    correctsModal.classList.remove('active');
+  });
+  correctsModalClose.addEventListener('click', e => {
     correctsModal.classList.remove('active');
   });
   correctsModalBody.addEventListener('click', e => {
@@ -227,6 +246,7 @@ const login = document.querySelector('.header__btn--login');
 if (login) {
   const modal = document.querySelector('[data-modal-login]');
   const modalBody = modal.querySelector('.modal__body');
+  const modalClose = modal.querySelector('.modal__close');
   login.addEventListener('click', e => {
     modal.classList.add('active');
   });
@@ -234,6 +254,9 @@ if (login) {
     e.stopPropagation();
   });
   modal.addEventListener('click', e => {
+    modal.classList.remove('active');
+  });
+  modalClose.addEventListener('click', e => {
     modal.classList.remove('active');
   });
   const modalButtons = document.querySelectorAll('.modal__btn');
@@ -263,15 +286,21 @@ const serviceModal = document.querySelector('.service-modal');
 if (serviceModal) {
   const serviceBtn = document.querySelectorAll('.lk-service__btn');
   const serviceModalBody = serviceModal.querySelector('.modal__body');
+  const serviceModalClose = serviceModal.querySelector('.modal__close');
   const serviceModalInput = serviceModal.querySelector('.service-modal__value');
+  const serviceModalText = serviceModal.querySelector('.service-modal__text');
   serviceBtn.forEach(el => {
     el.addEventListener('click', e => {
       serviceModal.classList.add('active');
       const title = el.closest('.lk-service').querySelector('.lk-service__title').textContent.trim();
       serviceModalInput.value = title;
+      serviceModalText.innerText = title;
     });
   });
   serviceModal.addEventListener('click', e => {
+    serviceModal.classList.remove('active');
+  });
+  serviceModalClose.addEventListener('click', e => {
     serviceModal.classList.remove('active');
   });
   serviceModalBody.addEventListener('click', e => {
@@ -309,6 +338,7 @@ circle.forEach(el => {
 /***/ (() => {
 
 const select = document.querySelectorAll('.select');
+const realSelect = document.querySelector('.cta__real-select');
 select.forEach(s => {
   const btn = s.querySelector('.select__header');
   const dropdown = s.querySelector('.dropdown');
@@ -318,10 +348,13 @@ select.forEach(s => {
     let isActive = s.classList.toggle('active');
     dropdown.style.maxHeight = isActive ? dropdown.scrollHeight + 'px' : null;
   });
-  dropdownItems.forEach(el => {
+  dropdownItems.forEach((el, i) => {
     el.addEventListener('click', e => {
       const content = el.textContent.trim();
       selectText.innerText = content;
+      realSelect.value = content;
+      console.log(realSelect);
+      console.log(realSelect.value);
       dropdown.style.maxHeight = null;
       s.classList.remove('active');
     });
@@ -340,7 +373,6 @@ const tabs = document.querySelectorAll('.lk-sites__btn[data-sites-btn]');
 const content = document.querySelectorAll('.lk-sites__content[data-sites-content]');
 tabs.forEach(btn => {
   btn.addEventListener('click', e => {
-    console.log(btn);
     tabs.forEach(el => {
       el.classList.remove('active');
     });
@@ -527,6 +559,11 @@ if (document.querySelector('.cta__form')) {
       rule: 'required'
     }, {
       rule: 'email'
+    }]
+  }, {
+    ruleSelector: '.real-select',
+    rules: [{
+      rule: 'required'
     }]
   }, {
     ruleSelector: '.input-area',
@@ -16258,6 +16295,17 @@ lkAdmin?.addEventListener('click', e => {
 sidebarClose?.addEventListener('click', e => {
   sidebar.classList.remove('active');
 });
+const burgerMenuBtn = document.querySelector('.header__burger');
+const burgerMenuClose = document.querySelector('.burger-menu__close');
+const burgerMenu = document.querySelector('.burger-menu');
+if (burgerMenu) {
+  burgerMenuBtn.addEventListener('click', e => {
+    burgerMenu.classList.add('active');
+  });
+  burgerMenuClose.addEventListener('click', e => {
+    burgerMenu.classList.remove('active');
+  });
+}
 })();
 
 /******/ })()

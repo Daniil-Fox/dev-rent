@@ -280,11 +280,18 @@ h4 {
 }
 
 .just-validate-error-field {
-  border: 1px solid #f04f4f;
+  border: 1px solid #f04f4f !important;
   background-color: #fff6f6;
 
   &+.form__fake-label {
     .form__fake-checkbox {
+      border: 1px solid #f04f4f;
+      background-color: #fff6f6;
+    }
+  }
+
+  &+.form__select {
+    .select__header {
       border: 1px solid #f04f4f;
       background-color: #fff6f6;
     }

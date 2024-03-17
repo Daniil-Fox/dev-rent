@@ -2,6 +2,7 @@ const login = document.querySelector('.header__btn--login')
 if(login){
   const modal = document.querySelector('[data-modal-login]')
   const modalBody = modal.querySelector('.modal__body')
+  const modalClose = modal.querySelector('.modal__close')
   login.addEventListener('click', e => {
     modal.classList.add('active')
   })
@@ -9,6 +10,9 @@ if(login){
     e.stopPropagation()
   })
   modal.addEventListener('click', e => {
+    modal.classList.remove('active')
+  })
+  modalClose.addEventListener('click', e => {
     modal.classList.remove('active')
   })
 

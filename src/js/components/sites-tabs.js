@@ -3,7 +3,7 @@ const content = document.querySelectorAll('.lk-sites__content[data-sites-content
 
 tabs.forEach(btn => {
   btn.addEventListener('click', e => {
-    console.log(btn);
+
     tabs.forEach(el => {
       el.classList.remove('active')
     })

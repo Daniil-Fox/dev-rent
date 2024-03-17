@@ -5,6 +5,10 @@
 
   &__admin {
     margin-bottom: 48px;
+
+    @include tablet {
+      margin-bottom: 16px;
+    }
   }
 
   @include tablet {

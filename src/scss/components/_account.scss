@@ -1,6 +1,10 @@
 .account {
   .modal__body {
     padding: 32px;
+
+    @include small-tablet {
+      padding: 56px 16px;
+    }
   }
 
   &__form {
@@ -15,11 +19,22 @@
       font-weight: 700;
       font-size: 18px;
       color: #000;
+
+      @include small-tablet {
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-start;
+        height: unset;
+      }
     }
   }
 
   &__title {
     margin-bottom: 24px;
+
+    @include small-tablet {
+      text-align: center;
+    }
   }
 
   &__current {

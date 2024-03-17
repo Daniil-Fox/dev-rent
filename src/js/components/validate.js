@@ -1,18 +1,8 @@
 import { validateForms } from './../functions/validate-forms';
 
-
-
-
-
 const afterForm = () => {
   console.log('Произошла отправка, тут можно писать любые действия');
 };
-
-
-
-
-
-
 
 if(document.querySelector('.cta__form')){
   const ctaRules = [
@@ -50,6 +40,14 @@ if(document.querySelector('.cta__form')){
         },
         {
           rule: 'email',
+        },
+      ]
+    },
+    {
+      ruleSelector: '.real-select',
+      rules: [
+        {
+          rule: 'required',
         },
       ]
     },

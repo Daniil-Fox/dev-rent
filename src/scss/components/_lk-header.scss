@@ -19,6 +19,12 @@
     }
   }
 
+  &__logo {
+    @media (max-width: 375px) {
+      width: 90px;
+    }
+  }
+
   &__container {
     display: flex;
     align-items: center;
@@ -47,6 +53,24 @@
 
     @include tablet {
       display: none;
+    }
+
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 120%;
+    color: #000;
+
+    span {
+      font-weight: 500;
+    }
+
+    &--sidebar {
+      display: none;
+      margin-bottom: 16px;
+
+      @include tablet {
+        display: flex;
+      }
     }
 
     svg {
