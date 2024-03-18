@@ -16347,9 +16347,9 @@ sidebarClose?.addEventListener('click', e => {
 });
 const burgerMenuBtn = document.querySelector('.header__burger');
 const burgerMenu = document.querySelector('.burger-menu');
-const burgerMenuClose = burgerMenu.querySelector('.burger-menu__close');
-const burgerLinks = burgerMenu.querySelectorAll('.nav__link');
 if (burgerMenu) {
+  const burgerMenuClose = burgerMenu.querySelector('.burger-menu__close');
+  const burgerLinks = burgerMenu.querySelectorAll('.nav__link');
   burgerMenuBtn.addEventListener('click', e => {
     burgerMenu.classList.add('active');
   });
