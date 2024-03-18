@@ -1662,6 +1662,8 @@ h4 {
   max-width: 520px;
   padding: 40px 48px;
   position: relative;
+  max-height: 95vh;
+  overflow-y: auto;
 }
 @media (max-width: 1440px) {
   .modal__body {
@@ -1673,6 +1675,7 @@ h4 {
     width: 100%;
     height: 100%;
     max-width: unset;
+    max-height: unset;
     padding: 56px calc(24px + var(--container-offset));
   }
 }
