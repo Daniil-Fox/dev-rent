@@ -4,7 +4,7 @@
   --third-family: "Century Gothic", sans-serif;
   --font3: "Nunito Sans", sans-serif;
   --font4: "Inter", sans-serif;
-  --content-width: 1600px;
+  --content-width: 1800px;
   --container-offset: 15px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
   --light-color: #fff;
