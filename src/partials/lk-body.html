@@ -1,7 +1,7 @@
 <section class="lk-body">
   <h2 class="visually-hidden">title</h2>
 
-  <div class="lk-sites lk-body__sites lk-content" id="sites">
+  <div class="lk-sites lk-body__sites lk-content active" id="sites">
     <div class="lk-sites__buttons">
       <button class="btn-reset lk-sites__btn active" data-sites-btn="inactive">
         Действующие
@@ -614,33 +614,6 @@
     </div>
   </div>
 
-  <!-- <div class="lk-support lk-body__support lk-content " id="support">
-    <h3 class="lk-support__title">Поддержка</h3>
-    <p class="p3 lk-support__desc">
-      У вас есть вопросы или предложения? Заполните форму
-      и наш оператор ответит вамв течение нескольких минут
-    </p>
-    <form action="#" class="form lk-support__form support-form">
-      <label class="form__label">
-        <input type="text" placeholder="Ваше имя" class="form__input input-name">
-      </label>
-      <label class="form__label">
-        <input type="email" placeholder="Email" class="form__input input-email">
-      </label>
-      <label class="form__label form__label--big">
-        <textarea type="text" placeholder="Задайте свой вопрос" class="form__input form__textarea input-que"></textarea>
-      </label>
-      <button class="btn-reset btn form__btn">
-        <span>Отправить</span>
-        <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M11.5412 21.4964C11.3878 21.3136 11.3147 21.076 11.3382 20.836C11.3616 20.5961 11.4796 20.3733 11.6662 20.2167L19.9082 13.3009L14.5567 13.1847C14.3164 13.1781 14.0903 13.0769 13.9279 12.9033C13.7655 12.7296 13.6799 12.4976 13.6899 12.2579C13.6999 12.0181 13.8046 11.7902 13.9812 11.6238C14.1578 11.4575 14.392 11.3662 14.6324 11.37L22.3657 11.538C22.4939 11.5406 22.6195 11.5702 22.7344 11.6248C22.8492 11.6795 22.9507 11.7579 23.0322 11.855C23.1137 11.9521 23.1733 12.0657 23.2072 12.1883C23.2411 12.3109 23.2484 12.4398 23.2287 12.5665L22.0513 20.2114C22.0337 20.3301 21.9928 20.4446 21.9309 20.5483C21.8691 20.6521 21.7875 20.743 21.6909 20.8159C21.5943 20.8888 21.4845 20.9423 21.368 20.9732C21.2514 21.004 21.1303 21.0118 21.0116 20.9959C20.893 20.9801 20.7791 20.9409 20.6766 20.8808C20.5741 20.8206 20.4849 20.7406 20.4142 20.6453C20.3435 20.55 20.2927 20.4414 20.2647 20.3257C20.2367 20.2099 20.232 20.0893 20.251 19.9709L21.0651 14.6796L12.8231 21.5955C12.6365 21.752 12.3966 21.8295 12.1562 21.811C11.9158 21.7924 11.6946 21.6792 11.5412 21.4964Z"
-            fill="white" />
-        </svg>
-      </button>
-    </form>
-  </div> -->
-
   <div class="lk-support sp lk-body__support lk-content" id="support">
     <div class="sp__wrapper">
       <div class="sp__container">
@@ -1054,23 +1027,30 @@
                   class="input-reset sp-wr__input"
                   placeholder="Сообщение..."
                 />
-                <label>
-                  <input type="file" class="visually-hidden" name="Файл" />
-                  <span class="sp-wr__att">
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M16.5 6V17.5C16.5 18.5609 16.0786 19.5783 15.3284 20.3284C14.5783 21.0786 13.5609 21.5 12.5 21.5C11.4391 21.5 10.4217 21.0786 9.67157 20.3284C8.92143 19.5783 8.5 18.5609 8.5 17.5V5C8.5 4.33696 8.76339 3.70107 9.23223 3.23223C9.70107 2.76339 10.337 2.5 11 2.5C11.663 2.5 12.2989 2.76339 12.7678 3.23223C13.2366 3.70107 13.5 4.33696 13.5 5V15.5C13.5 15.7652 13.3946 16.0196 13.2071 16.2071C13.0196 16.3946 12.7652 16.5 12.5 16.5C12.2348 16.5 11.9804 16.3946 11.7929 16.2071C11.6054 16.0196 11.5 15.7652 11.5 15.5V6H10V15.5C10 16.163 10.2634 16.7989 10.7322 17.2678C11.2011 17.7366 11.837 18 12.5 18C13.163 18 13.7989 17.7366 14.2678 17.2678C14.7366 16.7989 15 16.163 15 15.5V5C15 3.93913 14.5786 2.92172 13.8284 2.17157C13.0783 1.42143 12.0609 1 11 1C9.93913 1 8.92172 1.42143 8.17157 2.17157C7.42143 2.92172 7 3.93913 7 5V17.5C7 18.9587 7.57946 20.3576 8.61091 21.3891C9.64236 22.4205 11.0413 23 12.5 23C13.9587 23 15.3576 22.4205 16.3891 21.3891C17.4205 20.3576 18 18.9587 18 17.5V6H16.5Z"
-                        fill="#818181"
-                      />
-                    </svg>
-                  </span>
-                </label>
+                <div class="sp__row">
+                  <span class="att-name"></span>
+                  <label>
+                    <input
+                      type="file"
+                      class="visually-hidden in-file"
+                      name="Файл"
+                    />
+                    <span class="sp-wr__att">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M16.5 6V17.5C16.5 18.5609 16.0786 19.5783 15.3284 20.3284C14.5783 21.0786 13.5609 21.5 12.5 21.5C11.4391 21.5 10.4217 21.0786 9.67157 20.3284C8.92143 19.5783 8.5 18.5609 8.5 17.5V5C8.5 4.33696 8.76339 3.70107 9.23223 3.23223C9.70107 2.76339 10.337 2.5 11 2.5C11.663 2.5 12.2989 2.76339 12.7678 3.23223C13.2366 3.70107 13.5 4.33696 13.5 5V15.5C13.5 15.7652 13.3946 16.0196 13.2071 16.2071C13.0196 16.3946 12.7652 16.5 12.5 16.5C12.2348 16.5 11.9804 16.3946 11.7929 16.2071C11.6054 16.0196 11.5 15.7652 11.5 15.5V6H10V15.5C10 16.163 10.2634 16.7989 10.7322 17.2678C11.2011 17.7366 11.837 18 12.5 18C13.163 18 13.7989 17.7366 14.2678 17.2678C14.7366 16.7989 15 16.163 15 15.5V5C15 3.93913 14.5786 2.92172 13.8284 2.17157C13.0783 1.42143 12.0609 1 11 1C9.93913 1 8.92172 1.42143 8.17157 2.17157C7.42143 2.92172 7 3.93913 7 5V17.5C7 18.9587 7.57946 20.3576 8.61091 21.3891C9.64236 22.4205 11.0413 23 12.5 23C13.9587 23 15.3576 22.4205 16.3891 21.3891C17.4205 20.3576 18 18.9587 18 17.5V6H16.5Z"
+                          fill="#818181"
+                        />
+                      </svg>
+                    </span>
+                  </label>
+                </div>
               </div>
 
               <div class="sp-wr__btn">
@@ -1298,6 +1278,16 @@
   </div>
 
   <div class="lk-settings lk-body__settings lk-content" id="settings">
+    <form action="#" class="form lk-support__form">
+      <div class="author">
+        <label class="author__img">
+          <input type="file" class="visually-hidden in-author" />
+          <img src="./img/admin.webp" alt="" />
+        </label>
+        <input class="author__name input-reset" disabled value="Андрей П" />
+        <div class="author__btn">Изменить</div>
+      </div>
+    </form>
     <h3 class="lk-settings__title">Смена пароля</h3>
     <form action="#" class="form lk-support__form settings-form">
       <label class="form__label">

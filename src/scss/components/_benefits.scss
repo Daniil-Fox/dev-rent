@@ -120,6 +120,10 @@
     color: var(--default-and-f-button);
     border: 1.50px solid var(--default-and-f-button);
 
+    @media (max-width: 1440px) {
+      font-size: 14px;
+    }
+
     svg {
       fill: currentColor;
     }

@@ -84,3 +84,38 @@ if(window.matchMedia("(max-width: 768px)").matches && spM && spM.length > 0){
     })
   })
 }
+
+
+const attach = document.querySelector('.in-file')
+const attName = document.querySelector('.att-name')
+if(attName){
+  attach.addEventListener('change', e => {
+    const text = attach.files[0].name
+    attName.textContent = text
+  })
+}
+
+const authorImg = document.querySelector('.in-author')
+if(authorImg){
+  authorImg.addEventListener('change', e => {
+    console.log(authorImg.files[0])
+  })
+  const chBtn = document.querySelector('.author__btn')
+  const authorName = document.querySelector('.author__name')
+
+  chBtn.addEventListener('click', e => {
+    e.preventDefault()
+    let isActive = chBtn.classList.toggle('active')
+
+    if(isActive){
+      authorName.removeAttribute('disabled')
+      authorName.focus()
+      chBtn.textContent = 'Готово'
+    } else {
+      authorName.setAttribute('disabled', '')
+       chBtn.textContent = 'Изменить'
+    }
+  })
+}
+
+

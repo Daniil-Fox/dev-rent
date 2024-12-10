@@ -123,10 +123,15 @@ window.addEventListener('DOMContentLoaded', () => {
     '(min-width: 769px)',
     '.benefits__slider',
     {
-      modules: [Navigation],
+      modules: [Navigation, Autoplay],
       slidesPerView: 'auto',
       speed: 1000,
       spaceBetween: 24,
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false
+      },
+      speed: 500,
       navigation : {
         prevEl: '.benefits__arr--prev',
         nextEl: '.benefits__arr--next'
