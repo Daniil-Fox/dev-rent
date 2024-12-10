@@ -1,6 +1,8 @@
 .lk-card {
   padding: 40px 32px 24px;
   background-color: #fff;
+  box-shadow: 0 3px 10px rgba(#000, 0.1);
+  margin: 5px;
 
   &__title {
     display: flex;

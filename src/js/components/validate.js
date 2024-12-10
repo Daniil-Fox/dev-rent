@@ -177,6 +177,14 @@ if(document.querySelector('.logup-form')){
         }
       ]
     },
+    {
+      ruleSelector: '.agree',
+      rules: [
+        {
+          rule: 'required',
+        },
+      ]
+    },
   ];
   validateForms('.logup-form', logupRules);
 }

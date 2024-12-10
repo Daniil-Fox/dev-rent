@@ -120,3 +120,18 @@
     cursor: pointer;
   }
 }
+
+.agree {
+  .form__fake-checkbox {
+    border: 1px solid #3d55dd;
+  }
+}
+
+.agree {
+  input[type=checkbox]:checked~.form__fake-checkbox {
+    svg {
+      opacity: 1;
+    }
+  }
+
+}

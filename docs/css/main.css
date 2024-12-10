@@ -1483,8 +1483,9 @@ h4 {
 }
 .dropdown__item {
   cursor: pointer;
-  padding: 16px;
+  padding: 14px 10px;
   border-radius: 20px;
+  font-size: 14px;
 }
 
 .form__label {
@@ -1597,6 +1598,14 @@ h4 {
   letter-spacing: 0.02em;
   color: #000;
   cursor: pointer;
+}
+
+.agree .form__fake-checkbox {
+  border: 1px solid #3d55dd;
+}
+
+.agree input[type=checkbox]:checked ~ .form__fake-checkbox svg {
+  opacity: 1;
 }
 
 .select__header {
@@ -2401,6 +2410,9 @@ h4 {
 .lk-card {
   padding: 40px 32px 24px;
   background-color: #fff;
+  -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  margin: 5px;
 }
 .lk-card__title {
   display: -webkit-box;
@@ -2937,6 +2949,10 @@ h4 {
   padding-top: 30px;
   font-weight: 400;
   line-height: 135%;
+}
+.faq-item__content a {
+  color: inherit;
+  text-decoration: underline;
 }
 
 .sp__wrapper {

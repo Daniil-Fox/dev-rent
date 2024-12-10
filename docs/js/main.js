@@ -683,6 +683,11 @@ if (document.querySelector('.logup-form')) {
       value: true,
       errorMessage: 'Заполните телефон!'
     }]
+  }, {
+    ruleSelector: '.agree',
+    rules: [{
+      rule: 'required'
+    }]
   }];
   (0,_functions_validate_forms__WEBPACK_IMPORTED_MODULE_0__.validateForms)('.logup-form', logupRules);
 }
