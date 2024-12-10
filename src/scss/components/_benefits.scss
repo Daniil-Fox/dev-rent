@@ -115,7 +115,22 @@
     margin-bottom: 16px;
   }
 
+  &__btn {
+    background-color: transparent;
+    color: var(--default-and-f-button);
+    border: 1.50px solid var(--default-and-f-button);
+
+    svg {
+      fill: currentColor;
+    }
+
+    @include hover {
+      color: #fff;
+    }
+  }
+
   &__desc {
+    margin: 0;
 
     &:not(:last-child) {
       margin-bottom: 32px;

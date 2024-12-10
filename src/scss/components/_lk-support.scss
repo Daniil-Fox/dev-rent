@@ -1,8 +1,11 @@
 .lk-support {
   display: none;
+  height: 100%;
+
+  flex-direction: column;
 
   &.active {
-    display: block;
+    display: flex;
   }
 
   &__title {

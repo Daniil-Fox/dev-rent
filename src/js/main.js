@@ -65,3 +65,22 @@ if(burgerMenu){
     })
   })
 }
+
+
+
+const spM = document.querySelectorAll('.sp-m')
+
+if(window.matchMedia("(max-width: 768px)").matches && spM && spM.length > 0){
+  const res = document.querySelector('.sp__response')
+
+  res.querySelector('.sp-back').addEventListener('click', e => {
+    e.preventDefault()
+    res.classList.remove('active')
+  })
+  spM.forEach(el => {
+    el.addEventListener('click', e => {
+      e.preventDefault()
+      res.classList.add('active')
+    })
+  })
+}

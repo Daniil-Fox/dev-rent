@@ -342,7 +342,7 @@ template {
 }
 
 /**
- * Swiper 11.0.7
+ * Swiper 11.1.15
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
@@ -350,7 +350,7 @@ template {
  *
  * Released under the MIT License
  *
- * Released on: February 27, 2024
+ * Released on: November 18, 2024
  */
 @font-face {
   font-family: swiper-icons;
@@ -1090,7 +1090,7 @@ button.swiper-pagination-bullet {
   pointer-events: auto;
 }
 
-.swiper-cube {
+.swiper.swiper-cube {
   overflow: visible;
 }
 
@@ -1159,7 +1159,7 @@ button.swiper-pagination-bullet {
   backface-visibility: hidden;
 }
 
-.swiper-flip {
+.swiper.swiper-flip {
   overflow: visible;
 }
 
@@ -1194,7 +1194,7 @@ button.swiper-pagination-bullet {
   transition-property: transform, opacity, height, -webkit-transform;
 }
 
-.swiper-cards {
+.swiper.swiper-cards {
   overflow: visible;
 }
 
