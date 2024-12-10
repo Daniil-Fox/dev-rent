@@ -5,6 +5,16 @@
   will-change: max-height;
   background-color: #fff;
   transition: max-height .3s ease-out;
+  position: absolute;
+  z-index: 20;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  border-radius: 20px;
+
+  @include small-tablet {
+    border-radius: 10px;
+  }
 
   &__item {
     cursor: pointer;

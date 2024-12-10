@@ -1404,6 +1404,17 @@ h4 {
   background-color: #fff;
   -webkit-transition: max-height 0.3s ease-out;
   transition: max-height 0.3s ease-out;
+  position: absolute;
+  z-index: 20;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  border-radius: 20px;
+}
+@media (max-width: 768px) {
+  .dropdown {
+    border-radius: 10px;
+  }
 }
 .dropdown__item {
   cursor: pointer;
@@ -1429,6 +1440,9 @@ h4 {
 .form__label input.focus-visible {
   outline: 2px solid #3d55dd;
   outline-offset: -1px;
+}
+.form__select {
+  position: relative;
 }
 .form__btn .btn svg {
   width: 13px;
